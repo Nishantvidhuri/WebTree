@@ -19,12 +19,12 @@ const App = () => {
           <img
             src={user.picture.large}
             alt="Profile"
-            className="w-24 h-24 rounded-lg border border-gray-400"
+            className="w-32 h-32 rounded-lg border border-gray-400"
           />
-          <div className="ml-4">
-            <h2 className="text-lg font-semibold">{user.name.first} {user.name.last}</h2>
-            <p className="text-gray-600"><strong>Gender:</strong> {user.gender.charAt(0).toUpperCase() + user.gender.slice(1)}</p>
-            <p className="text-gray-600"><strong>Phone:</strong> {user.phone}</p>
+          <div className="ml-4 flex flex-col mt-4 gap-2">
+            <h2 className="text-xl font-semibold">{user.name.first} {user.name.last}</h2>
+            <p className="text-lg text-gray-600">{user.gender.charAt(0).toUpperCase() + user.gender.slice(1)}</p>
+            <p className="text-sm text-gray-600">{user.phone}</p>
           </div>
         </div>
       )}
